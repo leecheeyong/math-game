@@ -2,4 +2,4 @@
 A mini math game made using Svelte + Vite
 
 ## Demo
-<img src="demo.png" width="200px">
+<img src="demo.png" width="600px">
