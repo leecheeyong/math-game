@@ -1,4 +1,3 @@
-
 <script>
 import { onMount } from 'svelte';
 var time;
@@ -12,7 +11,6 @@ const operators = {
     "x": "*",
     "+": "+",
     "-": "-",
-    "÷": "/"
 }
 function focus(el) { el.focus(); }
 $: if(ans) ans.onchange = (e) => {
@@ -24,13 +22,12 @@ $: if(ans) ans.onchange = (e) => {
         setTimeout(() => { status = "Solve me !" }, 1500);
     }
 }
-
 const generate = () => {
     const rand = (e) => Math.floor(Math.random() * e);
     var result;
     result = [];
     for(let i=0; i<(rand(2)+1); i++) {
-    const opt = Object.keys(operators)[rand(Object.keys(operators).length - 1)];
+    const opt = Object.keys(operators)[rand(Object.keys(operators).length)];
     const operator = operators[opt];
     result.push({ opt, operator })
     }
@@ -38,7 +35,6 @@ const generate = () => {
     question = com;
     answer = eval(com);
 }
-
 let startCount = (e) => {
 if(e) e.currentTarget.style.display = "none";
 time = 0;
@@ -51,7 +47,6 @@ stopwatch = `${minutes ? `${minutes}min` : ""} ${seconds}sec`
 }, 1000);
 if(ans) ans?.focus();
 }
-
 let stopCount = (e) => {
     if(e && e.currentTarget.textContent != "Stop") {
         e.currentTarget.textContent = "Stop";
@@ -75,6 +70,6 @@ let stopCount = (e) => {
 </div>
 <div class="footer">
     <p>Math Game &copy; Lee Chee Yong 2023</p>
-    <p>This project is available as open source under the terms of the <a style="color: #6b8772; text-decoration: none" href="https://github.com/joeleeofficial/Joe-Portfolio/LICENSE">MIT License</a></p>
+    <p><a style="color: #6b8772; text-decoration: none" href="https://github.com/leecheeyong/math-game">This project</a> is available as open source under the terms of the <a style="color: #6b8772; text-decoration: none" href="https://github.com/leecheeyong/math-game/LICENSE">MIT License</a></p>
 </div>
 </body>
