@@ -33,7 +33,8 @@ const generate = () => {
     }
     const com = result.map(e => `${rand(9)+1}${e.operator}${rand(9)+1}`).join("");
     question = com;
-    answer = eval(com);
+    //answer = eval(com);
+    answer = new Function("return "+ com)();
 }
 let startCount = (e) => {
 if(e) e.currentTarget.style.display = "none";
@@ -69,7 +70,7 @@ let stopCount = (e) => {
 {/if}
 </div>
 <div class="footer">
-    <p>Math Game &copy; Lee Chee Yong 2023</p>
-    <p><a style="color: #6b8772; text-decoration: none" href="https://github.com/leecheeyong/math-game">This project</a> is available as open source under the terms of the <a style="color: #6b8772; text-decoration: none" href="https://github.com/leecheeyong/math-game/LICENSE">MIT License</a></p>
+    <p><a href="https://github.com/leecheeyong/math-game" target="_blank" rel="noreferrer">Math Game</a> &copy; Lee Chee Yong 2023</p>
+    <p><a href="https://github.com/leecheeyong/math-game" target="_blank" rel="noreferrer">This project</a> is available as open source under the terms of the <a href="https://github.com/leecheeyong/math-game/LICENSE">MIT License</a></p>
 </div>
 </body>
