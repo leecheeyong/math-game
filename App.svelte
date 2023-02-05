@@ -10,7 +10,7 @@ var ans;
 const operators = {
     "x": "*",
     "+": "+",
-    "-": "-",
+    "-": "-"
 }
 function focus(el) { el.focus(); }
 $: if(ans) ans.onchange = (e) => {
