@@ -69,6 +69,6 @@ let stopCount = (e) => {
 {/if}
 </div>
 <div class="footer">
-    <p><a href="https://github.com/leecheeyong/math-game" target="_blank" rel="noreferrer">Math Game</a> &copy; Lee Chee Yong 2023</p>
+    <p><a href="https://github.com/leecheeyong/math-game" target="_blank" rel="noreferrer">Math Game</a> &copy; Lee Chee Yong 2024</p>
     <p><a href="https://github.com/leecheeyong/math-game" target="_blank" rel="noreferrer">This project</a> is available as open source under the terms of the <a href="https://github.com/leecheeyong/math-game/LICENSE">MIT License</a></p>
 </div>
